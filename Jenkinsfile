@@ -30,7 +30,7 @@ pipeline {
             steps{
                  sh '''
                     cat ./build/index.html | tail -1
-                    npm test
+                    npm test -a
                     echo "All test cases are passed"
                   '''
             }
