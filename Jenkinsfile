@@ -17,14 +17,8 @@ pipeline {
             steps {
                 echo 'Hello World From Docker'
                 sh 'npm --version'
+                sh 'npm run build'
                 sh 'echo "node.js is configured"'
-            }
-        }
-        stage('Build App'){
-            steps {
-                sh '''
-                    npm run build
-                '''
             }
         }
     }
