@@ -11,13 +11,15 @@ pipeline {
             agent{
                 docker{
                     image 'node:18-alpine'
+                    resuseNone true
                 }
                 
             }
             steps {
                 echo 'Hello World From Docker'
                 sh 'npm --version'
-                sh 'npm run build'
+                sh 'ls -ltr'
+                //sh 'npm run build'
                 sh 'echo "node.js is configured"'
             }
         }
