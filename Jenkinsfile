@@ -26,5 +26,12 @@ pipeline {
                 sh 'echo "node.js is configured"'
             }
         }
+        stage('Test The Build'){
+          sh '''
+              cat ./build/index.html | tail -1
+              npm test
+              echo "All test cases are passed"
+          '''
+        }
     }
 }
