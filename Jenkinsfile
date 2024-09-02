@@ -15,9 +15,13 @@ pipeline {
                 
             }
             steps {
+                sh '''
                 echo 'Hello World From Docker'
-                sh 'npm --version'
-                sh 'echo "node.js is configured"'
+                npm --version
+                echo "node.js is configured"
+                echo "Welcome to Jenkins workd guru!!"
+                '''
+                
             }
         }
     }
